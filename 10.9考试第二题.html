@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 请封装一个函数判断2个对象是否相等
+    const obj1 = { a: 1, b: 2 }
+    const obj2 = { a: 1, b: 2 }
+    function fun() {
+        const keys1 = Object.keys(obj1)
+        const keys2 = Object.keys(obj2)
+        if (keys1.length !== keys2.length) {
+            return false
+        }
+        return true
+    }
+    console.log(fun(obj1, obj2));
+</script>
+
+</html>

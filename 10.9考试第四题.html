@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 4假设有一个名为fetchData()的异步函数用于获取数据 ，它返回一个promise对象，成功时返回数据，失败时返回错误信息。请根据以下要求完成题目
+    function fetchData(index) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (index % 2 === 0) {
+                    resolve(`对的 ${index}`);
+                } else {
+                    reject(`错误${index}`);
+                }
+            }, 1000);
+        });
+    }
+    //  a.使用promise解决回调地狱问题，依次调用fetchData()函数，获取数据并打印。
+
+    //  b.对于同时需要获取两个数据的情况，使用promise.all()实现并行请求,并在两个数据都返回后打印
+
+</script>
+
+</html>

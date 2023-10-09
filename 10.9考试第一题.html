@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 1请用ES6的 class类 完成一个计算机类
+    class camputer {
+        constructor() {
+            this.shu = 0;
+        }
+        jia(num) {
+            this.shu += num;
+            return this;
+        }
+        jian(num) {
+            this.shu -= num;
+            return this;
+        }
+        cheng(num) {
+            this.shu *= num;
+            return this;
+        }
+        chu(num) {
+            this.shu /= num;
+            return this;
+        }
+        clear() {
+            this.shu = 0;
+            return this;
+        }
+        getResult() {
+            return this.shu;
+        }
+    }
+    const calculator = new camputer();
+    const shu = calculator.jia(10).cheng(2).getResult();
+    console.log(shu); 
+</script>
+
+</html>

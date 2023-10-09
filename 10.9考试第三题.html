@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 给数组原型对象增加一个批量删除方法 mydelete，
+    // 要求这个方法可以传入多个下标将该下标的值进行删除
+    let arr = ["a", "b", "c", "d", "e"]
+    Array.prototype.mydelete = function (...index) {
+        console.log(Array.prototype);
+        index.sort((a, b) => b - a)
+        for (let i of index) {
+            if (i >= 0 && i < this.length) {
+                // this.splice(index, endIndex - index + 1);
+                this.splice(i, 1)
+            }
+        }
+        // return this;
+    }
+    arr.mydelete(2, 4, 3)
+    console.log(arr);
+
+</script>
+
+</html>
